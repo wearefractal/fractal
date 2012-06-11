@@ -2,7 +2,6 @@ fractal = require '../'
 should = require 'should'
 require 'mocha'
 
-
 describe 'which()', ->
   it 'should work', (done) ->
     should.exist fractal.which 'node'
@@ -39,3 +38,19 @@ describe 'seconds', ->
         seconds: 30
       time.should.eql "1:1:3:30"
       done()
+
+describe 'parseArguments()', ->
+  it 'should handle no arguments', (done) ->
+    args = fractal.parseArguments ->
+    should.not.exist args
+    done()
+  it 'should handle one argument', (done) ->
+    args = fractal.parseArguments (test) ->
+    should.exist args
+    args.should.eql ['test']
+    done()
+  it 'should handle two arguments', (done) ->
+    args = fractal.parseArguments (te,st) ->
+    should.exist args
+    args.should.eql ['te','st']
+    done()
