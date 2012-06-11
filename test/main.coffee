@@ -20,7 +20,7 @@ describe 'seconds', ->
       time.should.eql expected
       done()
 
-  describe 'convert()', ->
+  describe 'pretty()', ->
     it 'should work', (done) ->
       time = fractal.seconds.pretty
         days: 1
@@ -28,4 +28,14 @@ describe 'seconds', ->
         minutes: 3
         seconds: 30
       time.should.eql "1 days 1 hours 3 minutes 30 seconds"
+      done()
+
+  describe 'small()', ->
+    it 'should work', (done) ->
+      time = fractal.seconds.small
+        days: 1
+        hours: 1
+        minutes: 3
+        seconds: 30
+      time.should.eql "1:1:3:30"
       done()

@@ -19,3 +19,10 @@ module.exports =
     out += "#{minutes} minutes" if minutes
     out += " #{seconds} seconds" if seconds
     return out
+
+  small: ({days, hours, minutes, seconds}) ->
+    days ?= "00"
+    hours ?= "00"
+    minutes ?= "00"
+    seconds ?= "00"
+    return "#{days}:#{hours}:#{minutes}:#{seconds}"
