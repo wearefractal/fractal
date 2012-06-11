@@ -1,14 +1,14 @@
-![status](https://secure.travis-ci.org/wearefractal/APPNAME.png?branch=master)
+![status](https://secure.travis-ci.org/wearefractal/fractal.png?branch=master)
 
 ## Information
 
 <table>
 <tr> 
-<td>Package</td><td>APPNAME</td>
+<td>Package</td><td>fractal</td>
 </tr>
 <tr>
 <td>Description</td>
-<td>NOTHING HERE YET</td>
+<td>Utilities/snippets</td>
 </tr>
 <tr>
 <td>Node Version</td>
@@ -18,13 +18,7 @@
 
 ## Usage
 
-```coffee-script
-NOTHING HERE YET
-```
-
-## Examples
-
-You can view more examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
+Updating this every time something random is added is a pain in the ass. Check the source code/tests.
 
 ## LICENSE
 

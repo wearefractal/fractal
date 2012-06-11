@@ -1,10 +1,31 @@
-APPNAME = require '../'
+fractal = require '../'
 should = require 'should'
 require 'mocha'
 
-describe 'FUNCTIONTYPE', ->
-  describe 'FUNCTIONNAME()', ->
-    it 'should TASKNAME', (done) ->
-      should.exist true
-      true.should.equal.true
+
+describe 'which()', ->
+  it 'should work', (done) ->
+    should.exist fractal.which 'node'
+    done()
+
+describe 'seconds', ->
+  describe 'convert()', ->
+    it 'should work', (done) ->
+      expected =
+        days: 1
+        hours: 1
+        minutes: 3
+        seconds: 30
+      time = fractal.seconds.convert 90210
+      time.should.eql expected
+      done()
+
+  describe 'convert()', ->
+    it 'should work', (done) ->
+      time = fractal.seconds.pretty
+        days: 1
+        hours: 1
+        minutes: 3
+        seconds: 30
+      time.should.eql "1 days 1 hours 3 minutes 30 seconds"
       done()
