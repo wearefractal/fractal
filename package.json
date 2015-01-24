@@ -15,7 +15,7 @@
     "should": "^4.6.1"
   },
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script"
+    "test": "mocha --compilers coffee:coffee-script/register"
   },
   "engines": {
     "node": ">= 0.8.0"
