@@ -1,6 +1,7 @@
 os = require 'os'
 fs = require 'fs'
-{resolve, existsSync} = require 'path'
+{resolve} = require 'path'
+{existsSync} = require 'fs'
 
 getPlatform = -> (if os.type().match(/^Win/) then 'win' else 'unix')
 splitPath = (p) -> (if getPlatform() is "win" then p.split ";" else p.split ":")
